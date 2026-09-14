@@ -1,17 +1,803 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact — Nidhin Dev D</title><meta name="description" content="Contact Nidhin Dev D by email, phone or social media."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head><body><div class="noise"></div><div class="cursor"></div><header class="nav"><div class="container nav-inner">
-<a class="logo" href="index.html">NIDHIN<span>.</span></a>
-<button class="menu" aria-label="Open menu" aria-expanded="false">☰</button>
-<nav class="nav-links">
-<a class="nav-home" href="index.html">Home</a><a class="nav-about" href="about.html">About</a><a class="nav-gallery" href="gallery.html">Gallery</a><a class="nav-projects" href="projects.html">Projects</a><a class="nav-writeups" href="writeups.html">Writeups</a><a class="nav-contact" href="contact.html">Contact</a><a class="nav-cta" href="contact.html">Let's talk ↗</a>
-</nav></div></header>
-<main><section class="page-hero"><div class="page-grid-lines"></div><div class="container reveal"><div class="kicker">Let’s connect</div><h1>HAVE A<br><span class="outline">PROJECT?</span></h1><p class="lead">Tell me what you’re building, designing, breaking or securing.</p></div></section>
-<section class="section"><div class="container contact-grid"><div class="reveal"><div class="kicker">Direct channels</div><h2>Start a conversation.</h2><p class="muted">Choose the channel that feels natural. For project enquiries, the form sends an email directly to me.</p><div class="social-grid">
-<a class="social-card" href="https://instagram.com/" target="_blank" rel="noopener"><span>IG</span><div><small>INSTAGRAM</small><strong>@nidhin</strong></div><em>↗</em></a>
-<a class="social-card" href="https://in.linkedin.com/in/nidhin-dev-d-250817271" target="_blank" rel="noopener"><span>in</span><div><small>LINKEDIN</small><strong>Nidhin Dev D</strong></div><em>↗</em></a>
-<a class="social-card" href="https://github.com/Nidhi-321" target="_blank" rel="noopener"><span>GH</span><div><small>GITHUB</small><strong>Nidhi-321</strong></div><em>↗</em></a>
-<a class="social-card" href="mailto:nidhindev362@gmail.com"><span>@</span><div><small>EMAIL</small><strong>nidhindev362@gmail.com</strong></div><em>↗</em></a>
-<a class="social-card" href="tel:+918547778456"><span>☎</span><div><small>PHONE</small><strong>+91 85477 78456</strong></div><em>↗</em></a>
-<div class="social-card static"><span>⌖</span><div><small>LOCATION</small><strong>Thiruvananthapuram, Kerala, India</strong></div><em>•</em></div>
-</div></div>
-<form class="contact-form reveal" action="https://formsubmit.co/nidhindev362@gmail.com" method="POST"><input type="hidden" name="_subject" value="New portfolio enquiry — Nidhin Dev D"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><input type="hidden" name="_autoresponse" value="Thanks for reaching out. I received your message and will get back to you soon."><input type="hidden" name="_next" id="form-next" value=""><div class="form-label"><span>01</span>Your details</div><div class="form-row"><input class="field" name="name" placeholder="Your name" required><input class="field" type="email" name="email" placeholder="Email address" required></div><div class="form-label"><span>02</span>Project</div><input class="field" name="subject" placeholder="What are you working on?"><textarea class="field" name="message" placeholder="Tell me a little about the project…" required></textarea><label class="checkbox"><input type="checkbox" required> <span>I’m okay with you replying to this email.</span></label><button class="btn primary" type="submit">Send enquiry ↗</button><p class="form-note">This form uses FormSubmit to deliver the message to <strong>nidhindev362@gmail.com</strong>. On the first submission, the service may ask you to confirm the recipient address.</p></form></div></section>
-<section class="section"><div class="container cta reveal"><div><div class="kicker">Prefer email?</div><h2>nidhindev362<br>@gmail.com</h2></div><a class="btn" href="mailto:nidhindev362@gmail.com">Open mail ↗</a></div></section></main><footer class="footer"><div class="container footer-inner"><span>© <span data-year></span> Nidhin Dev D. Built with curiosity.</span><span>Developer · Designer · Cybersecurity</span></div></footer><script type="module" src="js/main.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Contact — Nidhin Dev D</title>
+
+    <meta
+        name="description"
+        content="Contact Nidhin Dev D by email, phone or social media."
+    >
+
+    <meta
+        name="author"
+        content="Nidhin Dev D"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* =========================================
+           CONTACT FORM STATUS
+        ========================================= */
+
+        .form-status {
+            margin-top: 16px;
+            min-height: 24px;
+            font-size: 14px;
+            line-height: 1.5;
+            transition:
+                opacity 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .form-status.success {
+            color: #6cff9a;
+        }
+
+        .form-status.error {
+            color: #ff7373;
+        }
+
+        .form-status.info {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .contact-form button[disabled] {
+            opacity: 0.6;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        .contact-form.is-sending {
+            pointer-events: none;
+        }
+
+        .contact-form.is-sending .field {
+            opacity: 0.7;
+        }
+
+        .form-note {
+            margin-top: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="noise"></div>
+
+    <!-- Custom cursor -->
+    <div class="cursor"></div>
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+    <header class="nav">
+        <div class="container nav-inner">
+
+            <a class="logo" href="index.html">
+                NIDHIN<span>.</span>
+            </a>
+
+            <button
+                class="menu"
+                aria-label="Open menu"
+                aria-expanded="false"
+                type="button"
+            >
+                ☰
+            </button>
+
+            <nav class="nav-links">
+
+                <a
+                    class="nav-home"
+                    href="index.html"
+                >
+                    Home
+                </a>
+
+                <a
+                    class="nav-about"
+                    href="about.html"
+                >
+                    About
+                </a>
+
+                <a
+                    class="nav-gallery"
+                    href="gallery.html"
+                >
+                    Gallery
+                </a>
+
+                <a
+                    class="nav-projects"
+                    href="projects.html"
+                >
+                    Projects
+                </a>
+
+                <a
+                    class="nav-writeups"
+                    href="writeups.html"
+                >
+                    Writeups
+                </a>
+
+                <a
+                    class="nav-contact"
+                    href="contact.html"
+                    aria-current="page"
+                >
+                    Contact
+                </a>
+
+                <a
+                    class="nav-cta"
+                    href="contact.html"
+                >
+                    Let's talk ↗
+                </a>
+
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+    <main>
+
+        <!-- =====================================
+             PAGE HERO
+        ====================================== -->
+        <section class="page-hero">
+
+            <div class="page-grid-lines"></div>
+
+            <div class="container reveal">
+
+                <div class="kicker">
+                    Let’s connect
+                </div>
+
+                <h1>
+                    HAVE A<br>
+                    <span class="outline">
+                        PROJECT?
+                    </span>
+                </h1>
+
+                <p class="lead">
+                    Tell me what you’re building, designing,
+                    breaking or securing.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CONTACT CONTENT
+        ====================================== -->
+        <section class="section">
+
+            <div class="container contact-grid">
+
+                <!-- =================================
+                     SOCIAL / DIRECT CONTACT
+                ================================== -->
+                <div class="reveal">
+
+                    <div class="kicker">
+                        Direct channels
+                    </div>
+
+                    <h2>
+                        Start a conversation.
+                    </h2>
+
+                    <p class="muted">
+                        Choose the channel that feels natural.
+                        For project enquiries, the form sends an
+                        email directly to me.
+                    </p>
+
+
+                    <div class="social-grid">
+
+                        <!-- Instagram -->
+                        <a
+                            class="social-card"
+                            href="https://instagram.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram"
+                        >
+                            <span>IG</span>
+
+                            <div>
+                                <small>
+                                    INSTAGRAM
+                                </small>
+
+                                <strong>
+                                    @nidhin
+                                </strong>
+                            </div>
+
+                            <em>↗</em>
+                        </a>
+
+
+                        <!-- LinkedIn -->
+                        <a
+                            class="social-card"
+                            href="https://in.linkedin.com/in/nidhin-dev-d-250817271"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                        >
+                            <span>in</span>
+
+                            <div>
+                                <small>
+                                    LINKEDIN
+                                </small>
+
+                                <strong>
+                                    Nidhin Dev D
+                                </strong>
+                            </div>
+
+                            <em>↗</em>
+                        </a>
+
+
+                        <!-- GitHub -->
+                        <a
+                            class="social-card"
+                            href="https://github.com/Nidhi-321"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub"
+                        >
+                            <span>GH</span>
+
+                            <div>
+                                <small>
+                                    GITHUB
+                                </small>
+
+                                <strong>
+                                    Nidhi-321
+                                </strong>
+                            </div>
+
+                            <em>↗</em>
+                        </a>
+
+
+                        <!-- Email -->
+                        <a
+                            class="social-card"
+                            href="mailto:nidhindev362@gmail.com"
+                            aria-label="Send email"
+                        >
+                            <span>@</span>
+
+                            <div>
+                                <small>
+                                    EMAIL
+                                </small>
+
+                                <strong>
+                                    nidhindev362@gmail.com
+                                </strong>
+                            </div>
+
+                            <em>↗</em>
+                        </a>
+
+
+                        <!-- Phone -->
+                        <a
+                            class="social-card"
+                            href="tel:+918547778456"
+                            aria-label="Call Nidhin Dev D"
+                        >
+                            <span>☎</span>
+
+                            <div>
+                                <small>
+                                    PHONE
+                                </small>
+
+                                <strong>
+                                    +91 85477 78456
+                                </strong>
+                            </div>
+
+                            <em>↗</em>
+                        </a>
+
+
+                        <!-- Location -->
+                        <div class="social-card static">
+
+                            <span>⌖</span>
+
+                            <div>
+                                <small>
+                                    LOCATION
+                                </small>
+
+                                <strong>
+                                    Thiruvananthapuram,
+                                    Kerala, India
+                                </strong>
+                            </div>
+
+                            <em>•</em>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     CONTACT FORM
+                ================================== -->
+                <form
+                    class="contact-form reveal"
+                    id="contactForm"
+                    novalidate
+                >
+
+                    <!-- Hidden metadata -->
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="New portfolio enquiry — Nidhin Dev D"
+                    >
+
+                    <input
+                        type="hidden"
+                        name="_captcha"
+                        value="false"
+                    >
+
+                    <input
+                        type="hidden"
+                        name="_template"
+                        value="table"
+                    >
+
+
+                    <!-- Section 01 -->
+                    <div class="form-label">
+                        <span>01</span>
+                        Your details
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <input
+                            class="field"
+                            type="text"
+                            name="name"
+                            placeholder="Your name"
+                            autocomplete="name"
+                            required
+                        >
+
+                        <input
+                            class="field"
+                            type="email"
+                            name="email"
+                            placeholder="Email address"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Section 02 -->
+                    <div class="form-label">
+                        <span>02</span>
+                        Project
+                    </div>
+
+
+                    <input
+                        class="field"
+                        type="text"
+                        name="subject"
+                        placeholder="What are you working on?"
+                        autocomplete="off"
+                    >
+
+
+                    <textarea
+                        class="field"
+                        name="message"
+                        placeholder="Tell me a little about the project…"
+                        rows="7"
+                        required
+                    ></textarea>
+
+
+                    <!-- Agreement -->
+                    <label class="checkbox">
+
+                        <input
+                            type="checkbox"
+                            name="consent"
+                            value="yes"
+                            required
+                        >
+
+                        <span>
+                            I’m okay with you replying to this email.
+                        </span>
+
+                    </label>
+
+
+                    <!-- Submit -->
+                    <button
+                        class="btn primary"
+                        type="submit"
+                        id="submitButton"
+                    >
+                        Send enquiry ↗
+                    </button>
+
+
+                    <!-- Status -->
+                    <p
+                        class="form-status"
+                        id="formStatus"
+                        aria-live="polite"
+                        role="status"
+                    ></p>
+
+
+                    <p class="form-note">
+                        This form securely sends your message to
+                        <strong>
+                            nidhindev362@gmail.com
+                        </strong>.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             EMAIL CTA
+        ====================================== -->
+        <section class="section">
+
+            <div class="container cta reveal">
+
+                <div>
+
+                    <div class="kicker">
+                        Prefer email?
+                    </div>
+
+                    <h2>
+                        nidhindev362<br>
+                        @gmail.com
+                    </h2>
+
+                </div>
+
+                <a
+                    class="btn"
+                    href="mailto:nidhindev362@gmail.com"
+                >
+                    Open mail ↗
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+    <footer class="footer">
+
+        <div class="container footer-inner">
+
+            <span>
+                ©
+                <span data-year></span>
+                Nidhin Dev D.
+                Built with curiosity.
+            </span>
+
+            <span>
+                Developer · Designer · Cybersecurity
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Existing site JavaScript -->
+    <script
+        type="module"
+        src="js/main.js"
+    ></script>
+
+
+    <!-- =========================================
+         FORMSUBMIT AJAX
+    ========================================== -->
+    <script>
+        (() => {
+
+            const form = document.getElementById("contactForm");
+            const button = document.getElementById("submitButton");
+            const status = document.getElementById("formStatus");
+
+            if (!form || !button || !status) {
+                return;
+            }
+
+
+            /*
+             * FormSubmit AJAX endpoint
+             *
+             * IMPORTANT:
+             * This endpoint sends the form without
+             * navigating away from your website.
+             */
+            const endpoint =
+                "https://formsubmit.co/ajax/nidhindev362@gmail.com";
+
+
+            /*
+             * Helper for status messages
+             */
+            function setStatus(message, type = "") {
+
+                status.textContent = message;
+
+                status.className =
+                    "form-status" +
+                    (type ? " " + type : "");
+
+            }
+
+
+            /*
+             * Handle form submission
+             */
+            form.addEventListener("submit", async (event) => {
+
+                event.preventDefault();
+
+
+                /*
+                 * Native browser validation
+                 */
+                if (!form.checkValidity()) {
+
+                    form.reportValidity();
+
+                    return;
+                }
+
+
+                /*
+                 * Start loading state
+                 */
+                button.disabled = true;
+
+                button.dataset.originalText =
+                    button.textContent;
+
+                button.textContent =
+                    "Sending…";
+
+                form.classList.add("is-sending");
+
+                setStatus(
+                    "Sending your message…",
+                    "info"
+                );
+
+
+                /*
+                 * Create FormData
+                 */
+                const formData =
+                    new FormData(form);
+
+
+                /*
+                 * Remove fields we don't want
+                 * transmitted as contact information.
+                 */
+                formData.delete("consent");
+
+
+                try {
+
+                    /*
+                     * Send to FormSubmit AJAX endpoint
+                     */
+                    const response =
+                        await fetch(endpoint, {
+
+                            method: "POST",
+
+                            headers: {
+                                "Accept":
+                                    "application/json"
+                            },
+
+                            body: formData
+
+                        });
+
+
+                    /*
+                     * Attempt to parse JSON response
+                     */
+                    let result = null;
+
+                    try {
+
+                        result =
+                            await response.json();
+
+                    } catch (jsonError) {
+
+                        result = null;
+
+                    }
+
+
+                    /*
+                     * Successful response
+                     */
+                    if (
+                        response.ok &&
+                        result &&
+                        (
+                            result.success === true ||
+                            result.success === "true"
+                        )
+                    ) {
+
+                        form.reset();
+
+
+                        setStatus(
+                            "Message sent successfully! Redirecting…",
+                            "success"
+                        );
+
+
+                        /*
+                         * Give the success message
+                         * a moment before redirecting.
+                         */
+                        setTimeout(() => {
+
+                            window.location.href =
+                                "thank-you.html";
+
+                        }, 1000);
+
+
+                        return;
+                    }
+
+
+                    /*
+                     * Some FormSubmit responses may
+                     * have a valid 2xx response without
+                     * the expected JSON body.
+                     */
+                    if (response.ok) {
+
+                        form.reset();
+
+                        setStatus(
+                            "Message sent successfully! Redirecting…",
+                            "success"
+                        );
+
+
+                        setTimeout(() => {
+
+                            window.location.href =
+                                "thank-you.html";
+
+                        }, 1000);
+
+
+                        return;
+                    }
+
+
+                    /*
+                     * Server-side error
+                     */
+                    const serverMessage =
+                        result &&
+                        result.message
+                            ? result.message
+                            : "Unable to send your message right now.";
+
+                    throw new Error(
+                        serverMessage
+                    );
+
+                } catch (error) {
+
+                    console.error(
+                        "Form submission error:",
+                        error
+                    );
+
+
+                    setStatus(
+                        "Something went wrong. Please try again or email me directly.",
+                        "error"
+                    );
+
+                } finally {
+
+                    button.disabled = false;
+
+                    button.textContent =
+                        button.dataset.originalText ||
+                        "Send enquiry ↗";
+
+                    form.classList.remove(
+                        "is-sending"
+                    );
+
+                }
+
+            });
+
+        })();
+    </script>
+
+</body>
+</html>
