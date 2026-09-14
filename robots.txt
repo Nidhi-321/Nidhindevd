@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://YOUR-VERCEL-DOMAIN.vercel.app/sitemap.xml
+Sitemap: https://nidhindevd.vercel.app/sitemap.xml
