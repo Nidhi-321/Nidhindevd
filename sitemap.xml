@@ -1,13 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url><loc>https://nidhindevd.vercel.app/</loc><priority>1.0</priority><changefreq>weekly</changefreq>
-    <image:image><image:loc>https://nidhindevd.vercel.app/images/photos/profile.jpg</image:loc><image:title>Nidhin Dev D portrait</image:title><image:caption>Portrait of Nidhin Dev D</image:caption></image:image>
+
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+
+  <url>
+    <loc>https://nidhindevd.vercel.app/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+
+    <image:image>
+      <image:loc>https://nidhindevd.vercel.app/images/photos/profile.jpg</image:loc>
+      <image:title>Nidhin Dev D</image:title>
+      <image:caption>Portrait of Nidhin Dev D, Developer, Designer and Cybersecurity Professional</image:caption>
+    </image:image>
   </url>
-  <url><loc>https://nidhindevd.vercel.app/about.html</loc><priority>0.9</priority><changefreq>monthly</changefreq>
-    <image:image><image:loc>https://nidhindevd.vercel.app/images/photos/profile.jpg</image:loc><image:title>Nidhin Dev D portrait</image:title><image:caption>Portrait of Nidhin Dev D</image:caption></image:image>
+
+  <url>
+    <loc>https://nidhindevd.vercel.app/about.html</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
   </url>
-  <url><loc>https://nidhindevd.vercel.app/projects.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://nidhindevd.vercel.app/gallery.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://nidhindevd.vercel.app/writeups.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://nidhindevd.vercel.app/contact.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+
+  <url>
+    <loc>https://nidhindevd.vercel.app/projects.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://nidhindevd.vercel.app/gallery.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://nidhindevd.vercel.app/writeups.html</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://nidhindevd.vercel.app/contact.html</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
 </urlset>
