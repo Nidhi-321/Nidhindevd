@@ -56,3 +56,7 @@ For best performance, use a compressed H.264 MP4, preferably 1920Ã—1080 or 1280Ã
 
 ## Home page 3D sphere
 The Home page 3D/WebGL sphere background has been removed. The custom looping hero video remains available through `js/config.js`.
+
+
+## Google Search + mobile optimization
+The site includes responsive mobile refinements and SEO discovery files (`robots.txt`, `sitemap.xml`, `site.webmanifest`, and `js/seo.js`). Before deploying, place your real portrait at `images/photos/profile.jpg` and replace `YOUR-VERCEL-DOMAIN.vercel.app` in `robots.txt` and `sitemap.xml` with the exact production hostname. See `SEO-SETUP.md`.

@@ -18,14 +18,18 @@ $$('.reveal').forEach(e => observer.observe(e));
 
 // pointer
 const cursor = $('.cursor');
-window.addEventListener('mousemove', e => { if(cursor){ cursor.style.left=e.clientX+'px'; cursor.style.top=e.clientY+'px'; } }, {passive:true});
-$$('a,button,.gallery-card,.project-card,.skill-card').forEach(el => {
-  el.addEventListener('mouseenter',()=>cursor && (cursor.classList.add('hover')));
-  el.addEventListener('mouseleave',()=>cursor && (cursor.classList.remove('hover')));
-});
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  window.addEventListener('mousemove', e => { if(cursor){ cursor.style.left=e.clientX+'px'; cursor.style.top=e.clientY+'px'; } }, {passive:true});
+}
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  $$('a,button,.gallery-card,.project-card,.skill-card').forEach(el => {
+    el.addEventListener('mouseenter',()=>cursor && (cursor.classList.add('hover')));
+    el.addEventListener('mouseleave',()=>cursor && (cursor.classList.remove('hover')));
+  });
+}
 
 // tilt
-$$('[data-tilt]').forEach(card=>{
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) $$('[data-tilt]').forEach(card=>{
   card.addEventListener('pointermove', e=>{
     const r=card.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
     card.style.transform=`perspective(1000px) rotateX(${(-y*4).toFixed(2)}deg) rotateY(${(x*5).toFixed(2)}deg) translateY(-6px)`;
@@ -80,3 +84,13 @@ if (heroVideo && SITE_CONFIG.HOME_VIDEO_ENABLED) {
 }
 
 
+
+
+// Keep the real profile image crawlable while providing a graceful visual fallback.
+document.querySelectorAll('img[data-profile-fallback]').forEach(img => {
+  img.addEventListener('error', () => {
+    if (img.dataset.fallbackApplied) return;
+    img.dataset.fallbackApplied = 'true';
+    img.src = img.dataset.profileFallback;
+  }, { once: true });
+});
