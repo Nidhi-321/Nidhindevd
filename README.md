@@ -48,7 +48,7 @@ Example:
 ```js
 HOME_VIDEO_ENABLED: true,
 HOME_VIDEO_FILE: 'my-portfolio-video.mp4',
-HOME_VIDEO_POSTER: 'images/bg_7.png',
+HOME_VIDEO_POSTER: 'images/bg_2.jpg',
 ```
 
 For best performance, use a compressed H.264 MP4, preferably 1920×1080 or 1280×720.
@@ -59,4 +59,4 @@ The Home page 3D/WebGL sphere background has been removed. The custom looping he
 
 
 ## Google Search + mobile optimization
-The site includes responsive mobile refinements and SEO discovery files (`robots.txt`, `sitemap.xml`, `site.webmanifest`, and `js/seo.js`). Before deploying, place your real portrait at `images/photos/profile.jpg` and replace `YOUR-VERCEL-DOMAIN.vercel.app` in `robots.txt` and `sitemap.xml` with the exact production hostname. See `SEO-SETUP.md`.
+The site includes responsive mobile refinements and SEO discovery files (`robots.txt`, `sitemap.xml`, `site.webmanifest`, static JSON-LD structured data, and crawlable meta tags). Before deploying, place your real portrait at `images/photos/profile.jpg` and replace `YOUR-VERCEL-DOMAIN.vercel.app` in `robots.txt` and `sitemap.xml` with the exact production hostname. See `SEO-SETUP.md`.

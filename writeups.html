@@ -1,26 +1,70 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nidhin Dev D — Cybersecurity Writeups</title><meta name="description" content="Cybersecurity writeups, technical notes and security research by Nidhin Dev D."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cybersecurity Writeups — Nidhin Dev D | Security Research</title><meta name="description" content="Read cybersecurity writeups, CTF notes, vulnerability research and technical security articles by Nidhin Dev D."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="theme-color" content="#060806">
 <meta name="author" content="Nidhin Dev D">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Nidhin Dev D">
-<meta property="og:title" content="Nidhin Dev D — Cybersecurity Writeups">
-<meta property="og:description" content="Cybersecurity writeups, technical notes and security research by Nidhin Dev D.">
+<meta property="og:title" content="Cybersecurity Writeups — Nidhin Dev D | Security Research">
+<meta property="og:description" content="Read cybersecurity writeups, CTF notes, vulnerability research and technical security articles by Nidhin Dev D.">
 <meta property="og:locale" content="en_IN">
+<meta property="og:url" content="https://nidhindevd.vercel.app/writeups.html">
+<meta property="og:image" content="https://nidhindevd.vercel.app/images/branding/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nidhin Dev D — Developer, Designer & Cybersecurity Professional">
+<meta name="twitter:image" content="https://nidhindevd.vercel.app/images/branding/og-image.png">
+<meta name="twitter:image:alt" content="Nidhin Dev D — Developer, Designer & Cybersecurity Professional">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Nidhin Dev D — Cybersecurity Writeups">
 <meta name="twitter:description" content="Cybersecurity writeups, technical notes and security research by Nidhin Dev D.">
-<link rel="canonical-placeholder" data-canonical-path="writeups.html">
+<link rel="canonical" href="https://nidhindevd.vercel.app/writeups.html">
+<link rel="icon" type="image/svg+xml" href="images/logo.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/branding/icon-192.png">
+<link rel="apple-touch-icon" sizes="192x192" href="images/branding/icon-192.png">
+<link rel="alternate" type="application/rss+xml" title="Nidhin Dev D on Medium" href="https://nidhindevd.medium.com/feed">
 <link rel="manifest" href="site.webmanifest">
-<script type="module" src="js/seo.js"></script>
+<!-- SEO: static structured data -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://nidhindevd.vercel.app/#website","url":"https://nidhindevd.vercel.app/","name":"Nidhin Dev D","description":"Portfolio of Nidhin Dev D — developer, designer and cybersecurity professional.","publisher":{"@id":"https://nidhindevd.vercel.app/#person"}},{"@type":"Person","@id":"https://nidhindevd.vercel.app/#person","name":"Nidhin Dev D","url":"https://nidhindevd.vercel.app/","image":"https://nidhindevd.vercel.app/images/photos/profile.jpg","jobTitle":"Developer, Designer & Cybersecurity Professional","description":"Developer, designer and cybersecurity professional building digital products, visual experiences and security-focused solutions.","sameAs":["https://www.linkedin.com/in/nidhin-dev-d-250817271/"],"worksFor":{"@type":"Organization","name":"Independent"}},{"@type":"CollectionPage","@id":"https://nidhindevd.vercel.app/writeups.html#webpage","url":"https://nidhindevd.vercel.app/writeups.html","name":"Cybersecurity Writeups — Nidhin Dev D | Security Research","description":"Read cybersecurity writeups, CTF notes, vulnerability research and technical security articles by Nidhin Dev D.","isPartOf":{"@id":"https://nidhindevd.vercel.app/#website"},"about":{"@id":"https://nidhindevd.vercel.app/#person"}}]}</script>
 </head><body><div class="noise"></div><div class="cursor"></div><header class="nav"><div class="container nav-inner">
-<a class="logo" href="index.html">NIDHIN<span>.</span></a>
+<a class="logo" href="index.html" aria-label="Nidhin Dev D home"><img src="images/logo.svg" alt="Nidhin Dev D logo"><span>NIDHIN<span class="logo-dot">.</span></span></a>
 <button class="menu" aria-label="Open menu" aria-expanded="false">☰</button>
 <nav class="nav-links">
 <a class="nav-home" href="index.html">Home</a><a class="nav-about" href="about.html">About</a><a class="nav-gallery" href="gallery.html">Gallery</a><a class="nav-projects" href="projects.html">Projects</a><a class="nav-writeups" href="writeups.html">Writeups</a><a class="nav-contact" href="contact.html">Contact</a><a class="nav-cta" href="contact.html">Let's talk ↗</a>
 </nav></div></header>
-<main><section class="page-hero"><div class="page-grid-lines"></div><div class="container reveal"><div class="kicker">Writing / Medium</div><h1>FIELD NOTES<br><span class="outline">FROM THE LAB.</span></h1><p class="lead">Live previews of my Medium writing, pulled into this portfolio and opened in an in-page reading panel.</p></div></section>
-<section class="section"><div class="container"><div class="writeups-toolbar reveal"><div><span class="kicker">Feed source</span><p class="muted" id="mediumSourceText">Loading <code>Medium</code>.</p></div><button class="btn" id="mediumRefresh">Refresh feed ↻</button></div><div class="writeup-grid" id="writeupGrid"><div class="loading-card"><span class="spinner"></span><p>Loading Medium previews…</p></div></div></div></section></main>
-<div class="detail-overlay" id="writeupOverlay" aria-hidden="true"><div class="detail-panel writeup-panel"><button class="detail-close" data-close aria-label="Close">×</button><div class="writeup-reading"><div class="kicker" id="writeupDetailCategory">MEDIUM / ARTICLE</div><h2 id="writeupDetailTitle">Article</h2><div class="writeup-meta" id="writeupDetailMeta"></div><div class="writeup-body" id="writeupDetailBody"></div><div class="actions"><a class="btn primary" id="writeupDetailLink" href="#" target="_blank" rel="noopener">Read full article on Medium ↗</a></div></div></div></div>
+<main><section class="page-hero"><div class="page-grid-lines"></div><div class="container reveal"><div class="kicker">Writing / Medium</div><h1>FIELD NOTES<br><span class="outline">FROM THE LAB.</span></h1><p class="lead">Live Medium writeups load automatically, with a full article view inside the portfolio and a direct Medium/App option.</p></div></section>
+<section class="section"><div class="container"><div class="writeups-toolbar reveal"><div><span class="kicker">Feed source</span><p class="muted" id="mediumSourceText">Loading <code>Medium</code>.</p></div><button class="btn" id="mediumRefresh" type="button">Refresh feed ↻</button></div><div class="writeup-grid" id="writeupGrid"><div class="loading-card"><span class="spinner"></span><p>Loading Medium previews…</p></div></div></div></section></main>
+
+<div class="detail-overlay medium-overlay" id="writeupOverlay" aria-hidden="true">
+  <div class="detail-panel writeup-panel">
+    <button class="detail-close" data-close aria-label="Close article preview">×</button>
+    <article class="medium-reading">
+      <header class="medium-toolbar">
+        <div class="medium-brand"><span class="medium-brand-dot">M</span><span>Medium-style reader</span></div>
+        <div class="medium-actions">
+          <a class="btn small" id="writeupDetailAppLink" href="#" rel="noopener" aria-label="Open this article in Medium">Open in Medium app ↗</a>
+          <a class="btn primary small" id="writeupDetailLink" href="#" target="_blank" rel="noopener">Open on Medium ↗</a>
+        </div>
+      </header>
+      <div class="medium-article-scroll">
+        <div class="medium-article">
+          <div class="medium-article-kicker">CYBERSECURITY / FIELD NOTE</div>
+          <h1 id="writeupDetailTitle">Article</h1>
+          <div class="medium-author-row">
+            <div class="medium-author-avatar">N</div>
+            <div><strong id="writeupDetailAuthor">Nidhin Dev D</strong><div class="medium-byline"><span id="writeupDetailDate">Published on Medium</span><span>·</span><span id="writeupDetailReadTime">1 min read</span></div></div>
+          </div>
+          <img id="writeupDetailHero" class="medium-article-hero" src="" alt="" hidden>
+          <div id="writeupDetailContent" class="medium-article-content"></div>
+          <div class="medium-end-note">
+            <span>Continue reading the original article on Medium for the complete publishing interface and responses.</span>
+            <a id="writeupDetailEndLink" href="#" target="_blank" rel="noopener">Open original ↗</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+
 <footer class="footer"><div class="container footer-inner"><span>© <span data-year></span> Nidhin Dev D. Built with curiosity.</span><span>Developer · Designer · Cybersecurity</span></div></footer><script type="module" src="js/main.js"></script><script type="module" src="js/writeups.js"></script></body></html>

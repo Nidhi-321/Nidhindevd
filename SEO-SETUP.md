@@ -1,13 +1,14 @@
-# Google Search + Google Images setup
+# SEO setup
 
-This static site now includes: responsive mobile CSS, absolute canonical URLs generated from the deployed origin, Open Graph/Twitter image metadata, Person/Website/WebPage structured data, robots.txt, sitemap.xml, descriptive image alt text, and an image sitemap entry for `images/photos/profile.jpg`.
+This portfolio is configured for search engines with crawlable HTML metadata, canonical URLs, Open Graph/Twitter tags, Person/WebSite/WebPage/CollectionPage structured data, descriptive image alt text, a sitemap, robots.txt, a web manifest, and a vector brand icon.
 
-## Before deploying
-1. Put your actual portrait at `images/photos/profile.jpg` (JPEG, PNG, WebP or AVIF; a sharp square or portrait image is best).
-2. Replace `YOUR-VERCEL-DOMAIN.vercel.app` in **robots.txt** and **sitemap.xml** with the exact production hostname you use in Vercel.
-3. Deploy the folder to the production Vercel domain.
+## Deploy
+1. Deploy the `Nidhindevd-main` folder to the production Vercel project.
+2. Keep `https://nidhindevd.vercel.app/` in `sitemap.xml` and the canonical tags when using that production domain.
+3. Verify the domain in Google Search Console and submit `/sitemap.xml`.
+4. Use URL Inspection to request indexing for `/`, `/about.html`, `/projects.html`, `/gallery.html`, `/writeups.html`, and `/contact.html`.
 
-## Google
-In Google Search Console, add/verify the production property, submit `/sitemap.xml`, then use URL Inspection to request indexing for `/` and `/about.html`.
-
-The site cannot guarantee an immediate ranking for `Nidhin Dev D` or placement in Google Images. Google decides indexing, ranking and image selection automatically after it crawls the public site.
+## Notes
+- The site uses `images/photos/profile.jpg` as the primary social/search image.
+- `images/logo.svg` is used as the favicon, mobile shortcut icon and site navigation brand mark.
+- SEO improves crawlability and understanding but cannot guarantee a particular Google ranking or image-search placement.

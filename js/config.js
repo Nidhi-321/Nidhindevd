@@ -7,5 +7,5 @@ export const SITE_CONFIG = {
   // Home hero video. Put your MP4 inside /videos/ and change this filename.
   HOME_VIDEO_ENABLED: true,
   HOME_VIDEO_FILE: 'hero.mp4',
-  HOME_VIDEO_POSTER: 'images/bg_7.png',
+  HOME_VIDEO_POSTER: 'images/bg_2.jpg',
 };
